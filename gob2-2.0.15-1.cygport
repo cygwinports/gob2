@@ -1,0 +1,9 @@
+inherit gnome2
+
+DESCRIPTION="GObject Builder"
+HOMEPAGE="http://www.5z.com/jirka/gob.html"
+
+src_test() {
+	cd ${B}/src
+	cygmake -j1 test testcpp
+}
