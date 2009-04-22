@@ -6,25 +6,25 @@ yacc or lex. The implementation is intentionaly kept simple, and no C
 code parsing is done.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.13-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.10-1.10-1
-  binutils-20060817-1
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
+  binutils-20080624-2
   bison-2.3-1
-  cygport-0.3.7-1
-  flex-2.5.33-3
-  gawk-3.1.5-4
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3  (for tests)
-  libtool1.5-1.5.23a-2
-  make-3.81-1
-  pkg-config-0.21-1
-  sed-4.1.4-1
+  cygport-0.9.6-1
+  flex-2.5.35-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2  (for tests)
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.5z.com/jirka/gob.html
@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gob2-2.0.14-X-src.tar.bz2
+  unpack gob2-2.0.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gob2-2.0.14-X.cygport all
+  cygport ./gob2-2.0.15-X.cygport all
 
 This will create:
-  /usr/src/gob2-2.0.14-X-src.tar.bz2
-  /usr/src/gob2-2.0.14-X.tar.bz2
+  /usr/src/gob2-2.0.15-X-src.tar.bz2
+  /usr/src/gob2-2.0.15-X.tar.bz2
 
 -------------------------------------------
 
@@ -52,31 +52,20 @@ Files included in the binary package:
 
   /usr/bin/gob2.exe
   /usr/share/aclocal/gob2.m4
-  /usr/share/doc/Cygwin/gob2-2.0.15.README
-  /usr/share/doc/gob2-2.0.15/AUTHORS
-  /usr/share/doc/gob2-2.0.15/COPYING
-  /usr/share/doc/gob2-2.0.15/ChangeLog
-  /usr/share/doc/gob2-2.0.15/INSTALL
-  /usr/share/doc/gob2-2.0.15/NEWS
-  /usr/share/doc/gob2-2.0.15/README
-  /usr/share/doc/gob2-2.0.15/TODO
+  /usr/share/doc/gob2/AUTHORS
+  /usr/share/doc/gob2/COPYING
+  /usr/share/doc/gob2/ChangeLog
+  /usr/share/doc/gob2/NEWS
+  /usr/share/doc/gob2/README
+  /usr/share/doc/gob2/TODO
   /usr/share/man/man1/gob2.1.gz
 
 ------------------
 
 Port Notes:
 
------ version 2.0.14-1 -----
-Version bump.
-
------ version 2.0.14-1 -----
-Version bump.
-
------ version 2.0.13-1 -----
-Version bump.
-
------ version 2.0.9-1 -----
-Initial release for Cygwin.
+----- version 2.0.15-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

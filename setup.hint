@@ -1,5 +1,5 @@
 category: Gnome Devel
-requires: cygwin glib2
+requires: cygwin libgcc1 libglib2.0_0
 sdesc: "GObject Builder preprocessor"
 ldesc: "Very simple preprocessor for making GObject objects with inline
 C code so that generated files are not edited.  Syntax is inspired by

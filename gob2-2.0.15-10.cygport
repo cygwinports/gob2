@@ -3,6 +3,8 @@ inherit gnome2
 DESCRIPTION="GObject Builder"
 HOMEPAGE="http://www.5z.com/jirka/gob.html"
 
+PATCH_URI="2.0.15-build.patch"
+
 src_test() {
 	cd ${B}/src
 	cygmake -j1 test testcpp
