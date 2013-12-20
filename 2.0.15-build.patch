@@ -4,8 +4,8 @@
  # 	test -f y.tab.h && mv -f y.tab.h parse.h
  
  test: test-object.c test-object.h
--	$(CC) -g -O -W -Wall -Wunused -Wuninitialized -Wdeclaration-after-statement -Wshadow -Wwrite-strings -Wunreachable-code -Wbad-function-cast -pedantic `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.c
-+	$(CC) $(CFLAGS) -W -Wall -Wunused -Wuninitialized -Wdeclaration-after-statement -Wshadow -Wwrite-strings -Wunreachable-code -Wbad-function-cast -pedantic `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.c
+-	$(CC) -g -O -W -Wall -Wunused -Wuninitialized -Wdeclaration-after-statement -Wshadow -Wwrite-strings -Wunreachable-code -Wbad-function-cast `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.c
++	$(CC) $(CFLAGS) -W -Wall -Wunused -Wuninitialized -Wdeclaration-after-statement -Wshadow -Wwrite-strings -Wunreachable-code -Wbad-function-cast `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.c
  
 -test-object.c test-object.h: test.gob gob2
 -	./gob2 test.gob
@@ -15,8 +15,8 @@
  # can't depend on the header file as that would break the above rule
  # since it's just for testing, who cares
  testcpp: test-object.cc
--	g++ -g -O -W -Wall -Wunused -Wuninitialized  -Wwrite-strings -Wunreachable-code -pedantic `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.cc
-+	g++ $(CFLAGS) -W -Wall -Wunused -Wuninitialized  -Wwrite-strings -Wunreachable-code -pedantic `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.cc
+-	g++ -g -O -W -Wall -Wunused -Wuninitialized  -Wwrite-strings -Wunreachable-code `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.cc
++	g++ $(CFLAGS) -W -Wall -Wunused -Wuninitialized  -Wwrite-strings -Wunreachable-code `pkg-config --cflags gobject-2.0 gtk+-2.0` -c test-object.cc
  
 -test-object.cc: test.gob gob2
 -	./gob2 --for-cpp test.gob
